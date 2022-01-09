@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+body
+{
+    background-color: #002451;
+}
+*a{
+    text-decoration: none;
+}
+/* Start main css */
+* > button{
+    border: 2px solid #6278df;
+    width: 155px;
+    height: 50px;
+}
+.hide-show h2{
+    display: none;
+}
+
+/* This class use */
+.this-class p
+{
+    color: #002451;
+    background: linear-gradient(to left, transparent, rgb(255, 255, 255),transparent);
+    padding: 6px 5px;
+    margin-bottom: 1px;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+    
+}
+.this-class p:nth-child(1)
+{
+    margin-top: 20px;
+}
+
+
+/* .accrodian css */
+
+.accrodian .accrodian-header h1
+{
+    font-size: 25px;
+    font-family: Roboto;
+    font-weight: 400;
+}
+.accrodian .accrodian-header
+{
+    background-color: blue;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+.accrodian p
+{
+    background-color: #f7f9ff;
+    color: gray;
+    padding: 10px 15px;
+    display: none;
+}
+
+/* Stop Watch */
+
+.stop-watch {
+    text-align: center;
+}
+.stop-watch hr {
+    height: 2px;
+    color: #fff;
+}
+.stop-watch .value p {
+    color: #fff;
+    font-size: 30px;
+}
+.value {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Professional-section */
+
+.increase-field input {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 2px 1px 4px 2px #5c6dabad;
+}
+.add-more, .remove {
+    border: 1px solid #eee;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.increase-field {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.add-more {
+    position: absolute;
+    bottom: -38px;
+}
+.pro-section {
+    position: relative;
+}
+.pro-section .increase-field:nth-child(1) .remove {
+    visibility: hidden;
+}
+
+
+
+
+
+
+

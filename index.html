@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>Practices Class By Develoeprrubel Hasan</title>
+    <link rel="shortcut icon" href="./img/Md Rubel Hasan.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./font awesome/css/all.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="1st-section py-5 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-3">
+                    <div class="hide-show">
+                        <button>Hide Show</button>
+                        <h2 class="py-2 text-white">We Love Js Our Js teacher is "Asraful Haque"</h2>
+                    </div>
+                    <div class="this-class">
+                        <p>Pianapple</p>
+                        <p>Coconat</p>
+                        <p>Pnut</p>
+                        <p>Zinggeber</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                    <div id="accordion" class="accrodian">
+                        <div class="accrodian-class">
+                            <div class="accrodian-header">
+                                <h1>1st Accrodian</h1>
+                                <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quisquam dolorem! Iusto rerum beatae dolorem minus quisquam ducimus eaque molestias!</p>
+                        </div>
+                        <div class="accrodian-class">
+                            <div class="accrodian-header">
+                                <h1>2nd Accrodian</h1>
+                                <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quisquam dolorem! Iusto rerum beatae dolorem minus quisquam ducimus eaque molestias!</p>
+                        </div>
+                        <div class="accrodian-class">
+                            <div class="accrodian-header">
+                                <h1>3rd Accrodian</h1>
+                                <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quisquam dolorem! Iusto rerum beatae dolorem minus quisquam ducimus eaque molestias!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-5">
+                    <div class="stop-watch">
+                        <button class="plus">Plus</button>
+                        <button class="minus">Minus</button>
+                        <button class="reset">Reset</button>
+                        <hr>
+                        <div class="value">
+                            <p>0</p>
+                            <p>0</p>
+                            <p>0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="professional-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <div class="pro-section">
+                        <div class="increase-field">
+                            <input type="text" placeholder="Type your Skill">
+                            <a class="remove"><ion-icon name="remove-circle-outline"></ion-icon></a>
+                        </div>
+                        <a class="add-more"><ion-icon name="add-circle-outline"></ion-icon></a>
+                    </div>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).on('click', '.hide-show button', function(){
+            $('.hide-show h2').slideToggle(500).css('font-size','18px');
+        });
+
+        // accrodian
+        $('.accrodian .accrodian-header').click(function(){
+            $('.accrodian p').slideToggle(500);
+        });
+
+        // stop-watch
+        let num = 1;
+        let cleare;
+        $('.stop-watch .plus').click(function(){
+            cleare = setInterval(function(){
+                $('.stop-watch .value p').html(num);
+                num++;
+            },100);
+        });
+        $('.stop-watch .minus').click(function(){
+            clearInterval(cleare);
+        });
+        $('.stop-watch .reset').click(function(){
+            let num= 0 ;
+            $('.stop-watch .value p').html(num);
+        });
+
+        //  This use
+
+        $(document).on('click','.this-class p', function(){
+            $(this).slideUp(500);
+        });
+        $(document).on('click','.this-class p:nth-child(4)', function(){
+            $(this).slideUp(500);
+        });
+        $('.add-more').click(function(){
+            $('.pro-section').append(`<div class="increase-field">
+                            <input type="text" placeholder="Type your Skill">
+                            <a class="remove"><ion-icon name="remove-circle-outline"></ion-icon></a>
+                        </div>`);
+        });
+        $(document).on('click','.remove',function(){
+            $(this).parent('.increase-field').remove();
+        });
+    </script>
+
+  </body>
+</html>
